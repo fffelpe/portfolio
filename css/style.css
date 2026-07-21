@@ -310,23 +310,22 @@ footer p {
         font-size: 0.9rem;
     }
 }
-
 /* ===================================================
-   PÁGINA DE CONTATO - LAYOUT LADO A LADO
+   PÁGINA DE CONTATO - CARDS LADO A LADO
 =================================================== */
 
 .container-contatos {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 30px; /* Espaçamento entre os cards */
-    flex-wrap: wrap; /* Em telas menores, quebra para a linha de baixo */
+    gap: 30px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
 .card-contato {
     flex: 1;
-    min-width: 250px; /* Largura mínima antes de quebrar linha em telas menores */
+    min-width: 250px;
     max-width: 380px;
     background: var(--preto-card, #111111);
     border: 1px solid var(--borda-card, #242424);
@@ -368,7 +367,20 @@ footer p {
     opacity: 0.8;
 }
 
-/* Ajuste específico para celulares */
+.voltar {
+    color: var(--cinza-claro, #bdbdbd);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: var(--transicao, all 0.35s ease);
+}
+
+.voltar:hover {
+    color: var(--branco, #ffffff);
+    letter-spacing: 2px;
+}
+
+/* Responsividade em celulares */
 @media (max-width: 768px) {
     .container-contatos {
         flex-direction: column;
