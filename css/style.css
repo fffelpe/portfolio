@@ -1,14 +1,39 @@
-/* ===========================
+/* ===================================================
+   FELIPE LEAL PORTFÓLIO
+   style.css
+   Página: Index
+=================================================== */
+
+/* =======================
    RESET
-=========================== */
+======================= */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+/* =======================
+   VARIÁVEIS
+======================= */
+
+:root{
+
+    --preto:#000000;
+    --branco:#FFFFFF;
+    --cinza:#BDBDBD;
+    --cinza-escuro:#1A1A1A;
+
+    --fonte:'Poppins',sans-serif;
+
+    --transicao:.35s ease;
 
 }
+
+/* =======================
+   BODY
+======================= */
 
 html{
 
@@ -18,23 +43,26 @@ html{
 
 body{
 
-    background:#000;
+    background:var(--preto);
 
-    color:#fff;
+    color:var(--branco);
 
-    font-family:'Poppins',sans-serif;
+    font-family:var(--fonte);
 
     overflow:hidden;
 
+    animation:fadePage 1s ease;
+
 }
 
-/* ===========================
-   TELA PRINCIPAL
-=========================== */
+/* =======================
+   HERO
+======================= */
 
 .hero{
 
-    width:100vw;
+    width:100%;
+
     height:100vh;
 
     display:flex;
@@ -45,13 +73,11 @@ body{
 
     align-items:center;
 
-    animation:fade 1.5s ease;
-
 }
 
-/* ===========================
+/* =======================
    TÍTULO
-=========================== */
+======================= */
 
 .titulo{
 
@@ -59,29 +85,37 @@ body{
 
     font-weight:300;
 
-    letter-spacing:10px;
+    letter-spacing:12px;
 
     margin-bottom:60px;
 
-    animation:subir 1.2s ease;
+    animation:slideDown 1s ease;
+
+    user-select:none;
 
 }
 
-/* ===========================
+/* =======================
    MENU
-=========================== */
+======================= */
 
 .menu{
 
     display:flex;
 
+    justify-content:center;
+
+    align-items:center;
+
     gap:45px;
+
+    flex-wrap:wrap;
 
 }
 
 .menu a{
 
-    color:white;
+    color:var(--branco);
 
     text-decoration:none;
 
@@ -91,11 +125,13 @@ body{
 
     position:relative;
 
-    transition:.35s ease;
+    transition:var(--transicao);
 
 }
 
-/* Linha inferior */
+/* =======================
+   LINHA ANIMADA
+======================= */
 
 .menu a::after{
 
@@ -111,17 +147,9 @@ body{
 
     height:2px;
 
-    background:white;
+    background:var(--branco);
 
-    transition:.35s ease;
-
-}
-
-.menu a:hover{
-
-    transform:translateY(-5px);
-
-    letter-spacing:3px;
+    transition:.4s;
 
 }
 
@@ -131,11 +159,41 @@ body{
 
 }
 
-/* ===========================
-   ANIMAÇÕES
-=========================== */
+/* =======================
+   HOVER
+======================= */
 
-@keyframes fade{
+.menu a:hover{
+
+    letter-spacing:3px;
+
+    transform:translateY(-4px);
+
+    color:white;
+
+}
+
+/* =======================
+   LINK ATIVO
+======================= */
+
+.menu a.ativo{
+
+    color:white;
+
+}
+
+.menu a.ativo::after{
+
+    width:100%;
+
+}
+
+/* =======================
+   ANIMAÇÕES
+======================= */
+
+@keyframes fadePage{
 
     from{
 
@@ -151,11 +209,11 @@ body{
 
 }
 
-@keyframes subir{
+@keyframes slideDown{
 
     from{
 
-        transform:translateY(40px);
+        transform:translateY(-40px);
 
         opacity:0;
 
@@ -171,9 +229,9 @@ body{
 
 }
 
-/* ===========================
+/* =======================
    RESPONSIVO
-=========================== */
+======================= */
 
 @media(max-width:900px){
 
@@ -183,6 +241,8 @@ body{
 
         text-align:center;
 
+        letter-spacing:6px;
+
     }
 
     .menu{
@@ -191,325 +251,24 @@ body{
 
         gap:25px;
 
-        align-items:center;
-
     }
 
 }
-/* ============================
-   CONTATO
-============================ */
 
-header{
+@media(max-width:500px){
 
-    position:absolute;
+    .titulo{
 
-    top:40px;
+        font-size:2.5rem;
 
-    left:60px;
-
-}
-
-.logo{
-
-    color:white;
-
-    text-decoration:none;
-
-    letter-spacing:5px;
-
-    font-size:1.2rem;
-
-    transition:.3s;
-
-}
-
-.logo:hover{
-
-    opacity:.7;
-
-}
-
-.contato{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    animation:fade 1s ease;
-
-}
-
-.contato h1{
-
-    font-size:4rem;
-
-    font-weight:300;
-
-    margin-bottom:20px;
-
-}
-
-.contato p{
-
-    color:#bfbfbf;
-
-    text-align:center;
-
-    margin-bottom:70px;
-
-    line-height:32px;
-
-}
-
-.card-contato{
-
-    width:450px;
-
-    background:#111;
-
-    border:1px solid #222;
-
-    border-radius:15px;
-
-    padding:30px;
-
-    margin-bottom:30px;
-
-    transition:.35s;
-
-}
-
-.card-contato:hover{
-
-    transform:translateY(-6px);
-
-    border-color:white;
-
-    box-shadow:0 0 25px rgba(255,255,255,.08);
-
-}
-
-.card-contato h2{
-
-    font-weight:400;
-
-    margin-bottom:15px;
-
-}
-
-.card-contato a{
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.card-contato a:hover{
-
-    letter-spacing:1px;
-
-}
-
-.voltar{
-
-    margin-top:40px;
-
-    color:#999;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.voltar:hover{
-
-    color:white;
-
-}
-
-@media(max-width:700px){
-
-    .card-contato{
-
-        width:90%;
+        letter-spacing:3px;
 
     }
 
-}
-.trabalhos{
+    .menu a{
 
-    width:85%;
+        font-size:.9rem;
 
-    margin:auto;
-
-    padding:120px 0;
-
-}
-
-.intro{
-
-    text-align:center;
-
-    color:#aaa;
-
-    margin-bottom:80px;
-
-}
-
-.projeto{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:60px;
-
-    margin-bottom:120px;
-
-}
-
-.video iframe{
-
-    width:600px;
-
-    height:340px;
-
-    border:none;
-
-    border-radius:15px;
-
-}
-
-.descricao{
-
-    flex:1;
-
-}
-
-.descricao h2{
-
-    font-size:42px;
-
-    margin-bottom:30px;
-
-}
-
-.descricao p{
-
-    color:#bfbfbf;
-
-    line-height:35px;
-
-}
-
-.projeto:hover{
-
-    transform:translateY(-8px);
-
-    transition:.4s;
-
-}
-body{
-
-    background:#000;
-
-    color:#fff;
-
-    font-family:'Poppins',sans-serif;
-
-    animation:fade .8s ease;
-
-}
-header{
-
-    padding:40px;
-
-}
-
-.menu{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:45px;
-
-}
-h1{
-
-    font-size:60px;
-
-    font-weight:300;
-
-    letter-spacing:8px;
-
-}
-.projeto{
-
-    display:flex;
-
-    gap:70px;
-
-    margin-top:80px;
-
-    transition:.4s;
-
-}
-
-.projeto:hover{
-
-    transform:translateY(-8px);
-
-}
-iframe{
-
-    border-radius:15px;
-
-    transition:.4s;
-
-}
-
-iframe:hover{
-
-    transform:scale(1.02);
-
-}
-.descricao{
-
-    opacity:.85;
-
-    line-height:35px;
-
-}
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
+    }
 
 }
