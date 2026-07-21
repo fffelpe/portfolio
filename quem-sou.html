@@ -2,288 +2,81 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Quem Sou | Felipe Leal</title>
 
+    <!-- Estilo CSS Principal -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Fonte Google Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header>
-
-        <div class="logo">
-
-            <a href="index.html">FELIPE LEAL</a>
-
-        </div>
-
-        <nav>
-
-            <ul>
-
-                <li><a href="meus-trabalhos.html">MEUS TRABALHOS</a></li>
-
-                <li><a class="ativo" href="quem-sou.html">QUEM SOU</a></li>
-
-                <li><a href="conhecimentos.html">CONHECIMENTOS</a></li>
-
-                <li><a href="linkedin.html">LINKEDIN</a></li>
-
-                <li><a href="contato.html">CONTATO</a></li>
-
-            </ul>
-
+    <!-- Menu de Navegação Superior -->
+    <header class="pagina">
+        <nav class="menu" aria-label="Navegação Principal">
+            <a href="index.html">Início</a>
+            <a href="quem-sou.html" class="ativo">Quem Sou</a>
+            <a href="conhecimentos.html">Conhecimentos</a>
+            <a href="trabalhos.html">Trabalhos</a>
+            <a href="contato.html">Contato</a>
         </nav>
-
     </header>
 
-    <!-- ================= HERO ================= -->
-
-    <section class="hero fade">
-
-        <div class="hero-texto">
-
-            <h1>QUEM SOU</h1>
-
-            <h2>
-
-                Comunicação.<br>
-                Tecnologia.<br>
-                Inovação.
-
-            </h2>
-
+    <!-- Conteúdo Principal -->
+    <main class="pagina">
+        
+        <!-- Título da Página -->
+        <section class="titulo-pagina">
+            <h1>Quem Sou</h1>
             <p>
-
-                Produtor de TV, jornalista e estudante de Tecnologia em
-                Cibersegurança.
-
+                Desenvolvedor, produtor audiovisual e entusiasta de tecnologia, focado em criar experiências digitais e soluções eficientes.
             </p>
+        </section>
 
-        </div>
-
-        <div class="hero-foto">
-
-            <img src="img/perfil.jpg" alt="Felipe Leal">
-
-        </div>
-
-    </section>
-
-    <!-- ================= HISTÓRIA ================= -->
-
-    <section class="historia reveal">
-
-        <h2>Minha História</h2>
-
-        <p>
-
-            Sou produtor de televisão, jornalista e estudante de Tecnologia em
-            Cibersegurança. Minha trajetória profissional une comunicação,
-            produção audiovisual e tecnologia, sempre buscando soluções
-            criativas para otimizar processos e desenvolver projetos de alta
-            qualidade.
-
-        </p>
-
-        <p>
-
-            Iniciei minha carreira no Jornal da Cultura, onde desenvolvi
-            habilidades em pesquisa de imagens, coordenação de links ao vivo,
-            organização de conteúdo e apoio à produção jornalística.
-
-        </p>
-
-        <p>
-
-            Posteriormente atuei como Produtor do Jornal da Cultura,
-            participando da produção diária do telejornal, elaboração de
-            escaladas, operação de switcher e gerenciamento de imagens.
-
-        </p>
-
-        <p>
-
-            Atualmente sou produtor do programa Agrocultura, desenvolvendo
-            pesquisas, produção de conteúdo, curadoria de imagens, organização
-            do acervo audiovisual e elaboração de briefings para a equipe de
-            arte.
-
-        </p>
-
-        <p>
-
-            Paralelamente venho aprofundando meus conhecimentos em Linux,
-            GitHub, Desenvolvimento Web, Inteligência Artificial e
-            Cibersegurança, buscando integrar tecnologia à comunicação.
-
-        </p>
-
-    </section>
-
-    <!-- ================= FORMAÇÃO ================= -->
-
-    <section class="formacao">
-
-        <h2>Formação</h2>
-
-        <div class="cards">
-
-            <article class="card reveal">
-
-                <h3>🎓 Rádio, TV e Internet</h3>
-
+        <!-- Seção de Biografia e Pilares -->
+        <section class="container-quem-sou">
+            
+            <div class="card-bio">
+                <h2>Minha Trajetória</h2>
                 <p>
-
-                    Universidade Cruzeiro do Sul
-
+                    Graduado em Rádio, TV e Internet e estudioso da área de Cibersegurança e Desenvolvimento, uni minha paixão por comunicação e tecnologia para construir projetos multimídia e sistemas inteligentes.
                 </p>
-
-                <span>Conclusão • 2022</span>
-
-            </article>
-
-            <article class="card reveal">
-
-                <h3>💻 Tecnologia em Cibersegurança</h3>
-
                 <p>
-
-                    Graduação em andamento
-
+                    Com experiência na produção técnica de mídia e jornalismo, tenho um olhar atento para a usabilidade, estética minimalista e automação de processos.
                 </p>
+            </div>
 
-                <span>Atual</span>
+            <div class="card-bio">
+                <h2>Interesses & Atuação</h2>
+                <ul class="lista-interesses">
+                    <li>💻 <strong>Desenvolvimento Web:</strong> HTML5, CSS3 e JavaScript.</li>
+                    <li>🛡️ <strong>Cibersegurança:</strong> Privacidade digital, proteção de dados e práticas defensivas.</li>
+                    <li>🐍 <strong>Linguagens & Lógica:</strong> Estudo contínuo em Python, C++, C# e Java.</li>
+                    <li>🎧 <strong>Produção de Mídia:</strong> Edição visual, curadoria musical e automação de fluxos.</li>
+                </ul>
+            </div>
 
-            </article>
+        </section>
 
+        <!-- Botão Voltar -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a class="voltar" href="index.html">← Voltar para o início</a>
         </div>
 
-    </section>
+    </main>
 
-    <!-- ================= TRAJETÓRIA ================= -->
-
-    <section class="timeline">
-
-        <h2>Minha Trajetória</h2>
-
-        <div class="linha">
-
-            <div class="evento reveal">
-
-                <div class="bola"></div>
-
-                <div class="conteudo">
-
-                    <h3>2021</h3>
-
-                    <p>Estágio • Jornal da Cultura</p>
-
-                </div>
-
-            </div>
-
-            <div class="evento reveal">
-
-                <div class="bola"></div>
-
-                <div class="conteudo">
-
-                    <h3>2022</h3>
-
-                    <p>Produtor Assistente • Jornal da Cultura</p>
-
-                </div>
-
-            </div>
-
-            <div class="evento reveal">
-
-                <div class="bola"></div>
-
-                <div class="conteudo">
-
-                    <h3>2022 – 2023</h3>
-
-                    <p>Produtor • Jornal da Cultura</p>
-
-                </div>
-
-            </div>
-
-            <div class="evento reveal">
-
-                <div class="bola"></div>
-
-                <div class="conteudo">
-
-                    <h3>2023 – Atual</h3>
-
-                    <p>Produtor • Agrocultura</p>
-
-                </div>
-
-            </div>
-
-            <div class="evento reveal">
-
-                <div class="bola"></div>
-
-                <div class="conteudo">
-
-                    <h3>Atual</h3>
-
-                    <p>Tecnologia em Cibersegurança</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= MISSÃO ================= -->
-
-    <section class="missao reveal">
-
-        <h2>Minha Missão</h2>
-
-        <p>
-
-            Acredito que comunicação e tecnologia caminham juntas. Meu objetivo
-            é desenvolver soluções que integrem inteligência artificial,
-            automação e desenvolvimento web aos processos de produção
-            audiovisual, tornando-os mais eficientes, criativos e inovadores.
-
-        </p>
-
-    </section>
-
-    <!-- ================= RODAPÉ ================= -->
-
+    <!-- Rodapé -->
     <footer>
-
-        <p>
-
-            © 2026 Felipe Leal
-
-        </p>
-
+        <p>&copy; 2026 Felipe Leal. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Scripts de Transição e Interatividade -->
     <script src="js/script.js"></script>
 
 </body>
