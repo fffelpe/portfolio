@@ -347,3 +347,78 @@ header{
     }
 
 }
+.trabalhos{
+
+    width:85%;
+
+    margin:auto;
+
+    padding:120px 0;
+
+}
+
+.intro{
+
+    text-align:center;
+
+    color:#aaa;
+
+    margin-bottom:80px;
+
+}
+
+.projeto{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    margin-bottom:120px;
+
+}
+
+.video iframe{
+
+    width:600px;
+
+    height:340px;
+
+    border:none;
+
+    border-radius:15px;
+
+}
+
+.descricao{
+
+    flex:1;
+
+}
+
+.descricao h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.descricao p{
+
+    color:#bfbfbf;
+
+    line-height:35px;
+
+}
+
+.projeto:hover{
+
+    transform:translateY(-8px);
+
+    transition:.4s;
+
+}
