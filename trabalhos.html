@@ -1,54 +1,110 @@
-<main class="trabalhos">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    <h1>MEUS TRABALHOS</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhos | Felipe Leal</title>
 
-    <p class="intro">
-        Alguns dos programas e projetos dos quais participei
-        durante minha trajetória profissional.
-    </p>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- AGROCULTURA -->
+    <!-- Fonte Google Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
-    <section class="projeto">
+<body>
 
-        <div class="video">
+    <!-- Menu de Navegação -->
+    <header class="pagina">
+        <nav class="menu" aria-label="Navegação Principal">
+            <a href="index.html">Início</a>
+            <a href="quem-sou.html">Quem Sou</a>
+            <a href="conhecimentos.html">Conhecimentos</a>
+            <a href="trabalhos.html" class="ativo">Trabalhos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
 
-            Playlist do YouTube
-
-        </div>
-
-        <div class="descricao">
-
-            <h2>Agrocultura</h2>
-
+    <!-- Conteúdo Principal -->
+    <main class="pagina">
+        
+        <section class="titulo-pagina">
+            <h1>Trabalhos e Produções</h1>
             <p>
-                Atuação na produção do programa Agrocultura, realizando pesquisa de pautas, levantamento de informações, curadoria de imagens, organização do acervo audiovisual e elaboração de briefings para a equipe de arte. Participação no planejamento das gravações e apoio à produção das reportagens exibidas semanalmente.
+                Abaixo estão destacadas algumas das principais produções de mídia e jornalismo nas quais atuei, com foco em gestão de conteúdo, pesquisas e fluxos de exibição.
             </p>
+        </section>
 
+        <!-- PROJETO 1: AGROCULTURA -->
+        <article class="projeto">
+            <div class="video">
+                <!-- Substitua o link 'src' abaixo pela URL de incorporação da playlist do Agrocultura -->
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PL_SUA_PLAYLIST_AGROCULTURA" 
+                    title="Playlist Agrocultura" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="descricao">
+                <h2>Programa Agrocultura</h2>
+                <p>
+                    Atuação técnica e executiva na produção audiovisual voltada para o setor agropecuário e sustentabilidade.
+                </p>
+                <ul>
+                    <li>Pesquisa de pautas, dados de mercado e mapeamento de fontes.</li>
+                    <li>Acompanhamento de decupagem e organização do fluxo de reportagens.</li>
+                    <li>Gestão de metadados, identificação e controle de matérias exibidas.</li>
+                    <li>Suporte à edição técnica e conferência do padrão de exibição em vídeo.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- PROJETO 2: JORNAL DA CULTURA -->
+        <article class="projeto">
+            <div class="video">
+                <!-- Substitua o link 'src' abaixo pela URL de incorporação da playlist do Jornal da Cultura -->
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PL_SUA_PLAYLIST_JORNAL_DA_CULTURA" 
+                    title="Playlist Jornal da Cultura" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="descricao">
+                <h2>Jornal da Cultura</h2>
+                <p>
+                    Participação no suporte e infraestrutura de produção do telejornalismo diário e em tempo real.
+                </p>
+                <ul>
+                    <li>Apoio na curadoria de imagens, checagem e inserção de recursos visuais.</li>
+                    <li>Articulação entre redação, equipes de reportagem e switcher.</li>
+                    <li>Organização de acervo digital de vídeos e roteiros de estúdio.</li>
+                    <li>Verificação de padrão técnico e agilidade na entrega de conteúdos diários.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Botão Voltar -->
+        <div style="text-align: center; margin-top: 60px;">
+            <a class="voltar" href="index.html">← Voltar para o início</a>
         </div>
 
-    </section>
+    </main>
 
-    <!-- JORNAL DA CULTURA -->
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Felipe Leal. Todos os direitos reservados.</p>
+    </footer>
 
-    <section class="projeto">
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
 
-        <div class="video">
+</body>
 
-            Playlist do YouTube
-
-        </div>
-
-        <div class="descricao">
-
-            <h2>Jornal da Cultura</h2>
-
-            <p>
-                Participação na produção do Jornal da Cultura, auxiliando na coordenação de links ao vivo, pesquisa e seleção de imagens, operação de switcher, elaboração da escalada do telejornal e suporte às equipes de reportagem durante as transmissões ao vivo.
-            </p>
-
-        </div>
-
-    </section>
-
-</main>
+</html>
