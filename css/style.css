@@ -310,56 +310,57 @@ footer p {
         font-size: 0.9rem;
     }
 }
+
 /* ===================================================
-   PÁGINA DE CONTATO
+   PÁGINA DE CONTATO - LAYOUT LADO A LADO
 =================================================== */
 
 .container-contatos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Em telas menores, quebra para a linha de baixo */
     margin-top: 40px;
 }
 
 .card-contato {
-    background: var(--preto-card);
-    border: 1px solid var(--borda-card);
+    flex: 1;
+    min-width: 250px; /* Largura mínima antes de quebrar linha em telas menores */
+    max-width: 380px;
+    background: var(--preto-card, #111111);
+    border: 1px solid var(--borda-card, #242424);
     border-radius: 18px;
     padding: 35px 25px;
     text-align: center;
-    transition: var(--transicao);
+    transition: var(--transicao, all 0.35s ease);
 }
 
 .card-contato:hover {
     transform: translateY(-8px);
-    border-color: var(--branco);
+    border-color: var(--branco, #ffffff);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-}
-
-.icone-contato {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
 }
 
 .card-contato h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-contato p {
-    color: var(--cinza-claro);
+    color: var(--cinza-claro, #bdbdbd);
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
 
 .link-contato {
-    color: var(--branco);
+    color: var(--branco, #ffffff);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: var(--transicao);
+    transition: var(--transicao, all 0.35s ease);
     word-break: break-all;
 }
 
@@ -367,15 +368,15 @@ footer p {
     opacity: 0.8;
 }
 
-.voltar {
-    color: var(--cinza-claro);
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    transition: var(--transicao);
-}
+/* Ajuste específico para celulares */
+@media (max-width: 768px) {
+    .container-contatos {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.voltar:hover {
-    color: var(--branco);
-    letter-spacing: 2px;
+    .card-contato {
+        width: 100%;
+        max-width: 100%;
+    }
 }
