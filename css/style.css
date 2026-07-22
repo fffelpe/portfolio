@@ -164,28 +164,25 @@ header{
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
 
-    height: 80px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 0 60px;
-
-    background: rgba(0,0,0,.85);
+    background: rgba(0,0,0,.90);
 
     backdrop-filter: blur(12px);
 
-    -webkit-backdrop-filter: blur(12px);
-
     border-bottom: 1px solid rgba(255,255,255,.08);
+
+    padding: 25px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
 
     z-index: 1000;
 
@@ -197,35 +194,59 @@ header{
 
 nav ul{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    justify-content:center;
 
-    gap: 40px;
+    align-items:center;
 
-}
-
-nav li{
-
-    list-style: none;
+    gap:40px;
 
 }
 
 nav a{
 
-    position: relative;
+    position:relative;
 
-    color: var(--cor-texto);
+    color:white;
 
-    font-size: .95rem;
+    font-size:.95rem;
 
-    letter-spacing: 2px;
+    letter-spacing:2px;
 
-    font-weight: 400;
+    transition:.3s;
 
-    transition: var(--transicao);
+}
 
-    padding: 6px 0;
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+nav a.ativo::after{
+
+    width:100%;
 
 }
 
