@@ -1,198 +1,200 @@
-/* ===========================
-   RESET
-=========================== */
-
+/* =====================================
+   1. RESET
+===================================== */
 *{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
-
-    scroll-behavior:smooth;
-
+    scroll-behavior: smooth;
 }
 
 body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
 
-    background:#000;
+img{
+    max-width: 100%;
+    display: block;
+}
 
-    color:#fff;
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
-    font-family:'Poppins',sans-serif;
+ul{
+    list-style: none;
+}
 
-    overflow:hidden;
+button,
+input,
+textarea{
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+    background: transparent;
+}
+
+/* =====================================
+   2. VARIÁVEIS
+===================================== */
+
+:root{
+
+    --cor-fundo: #000000;
+    --cor-card: #111111;
+    --cor-card-hover: #1c1c1c;
+
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #b8b8b8;
+
+    --cor-borda: #2b2b2b;
+    --cor-destaque: #ffffff;
+
+    --sombra: 0 10px 30px rgba(255,255,255,.06);
+
+    --transicao: .35s ease;
+
+    --fonte: 'Poppins', sans-serif;
+
+    --largura-maxima: 1200px;
 
 }
 
-/* ===========================
-   TELA PRINCIPAL
-=========================== */
+/* =====================================
+   3. BODY
+===================================== */
 
-.hero{
+body{
 
-    width:100vw;
-    height:100vh;
+    background: var(--cor-fundo);
 
-    display:flex;
+    color: var(--cor-texto);
 
-    flex-direction:column;
+    font-family: var(--fonte);
 
-    justify-content:center;
+    font-size: 16px;
 
-    align-items:center;
+    line-height: 1.7;
 
-    animation:fade 1.5s ease;
+    overflow-x: hidden;
 
-}
+    animation: fadePage .8s ease;
 
-/* ===========================
-   TÍTULO
-=========================== */
+    -webkit-font-smoothing: antialiased;
 
-.titulo{
-
-    font-size:6rem;
-
-    font-weight:300;
-
-    letter-spacing:10px;
-
-    margin-bottom:60px;
-
-    animation:subir 1.2s ease;
+    -moz-osx-font-smoothing: grayscale;
 
 }
 
-/* ===========================
-   MENU
-=========================== */
+/* Container principal */
 
-.menu{
+main{
 
-    display:flex;
-
-    gap:45px;
+    width: 100%;
 
 }
 
-.menu a{
+/* Área padrão das páginas */
 
-    color:white;
+.pagina{
 
-    text-decoration:none;
+    width: 100%;
 
-    font-size:1rem;
+    max-width: var(--largura-maxima);
 
-    letter-spacing:2px;
+    margin: 0 auto;
 
-    position:relative;
-
-    transition:.35s ease;
+    padding: 140px 40px 80px;
 
 }
 
-/* Linha inferior */
+/* Título das páginas */
 
-.menu a::after{
+.titulo-pagina{
 
-    content:"";
+    text-align: center;
 
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:white;
-
-    transition:.35s ease;
+    margin-bottom: 80px;
 
 }
 
-.menu a:hover{
+.titulo-pagina h1{
 
-    transform:translateY(-5px);
+    font-size: clamp(2.5rem, 5vw, 4rem);
 
-    letter-spacing:3px;
+    font-weight: 300;
 
-}
+    letter-spacing: 6px;
 
-.menu a:hover::after{
+    margin-bottom: 20px;
 
-    width:100%;
-
-}
-
-/* ===========================
-   ANIMAÇÕES
-=========================== */
-
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
+    text-transform: uppercase;
 
 }
 
-@keyframes subir{
+.titulo-pagina p{
 
-    from{
+    max-width: 720px;
 
-        transform:translateY(40px);
+    margin: auto;
 
-        opacity:0;
+    color: var(--cor-texto-secundario);
 
-    }
+    font-size: 1.1rem;
 
-    to{
-
-        transform:translateY(0);
-
-        opacity:1;
-
-    }
+    line-height: 1.8;
 
 }
 
-/* ===========================
-   RESPONSIVO
-=========================== */
+/* =====================================
+   4. HEADER
+===================================== */
 
-@media(max-width:900px){
+/* =====================================
+   5. MENU
+===================================== */
 
-    .titulo{
+/* =====================================
+   6. CONTAINER
+===================================== */
 
-        font-size:3.5rem;
+/* =====================================
+   7. TÍTULOS
+===================================== */
 
-        text-align:center;
+/* =====================================
+   8. CARDS
+===================================== */
 
-    }
+/* =====================================
+   9. LISTAS
+===================================== */
 
-    .menu{
+/* =====================================
+   10. FORMAÇÃO
+===================================== */
 
-        flex-direction:column;
+/* =====================================
+   11. BOTÕES
+===================================== */
 
-        gap:25px;
+/* =====================================
+   12. RODAPÉ
+===================================== */
 
-        align-items:center;
+/* =====================================
+   13. ANIMAÇÕES
+===================================== */
 
-    }
-
-}
+/* =====================================
+   14. RESPONSIVIDADE
+===================================== */
