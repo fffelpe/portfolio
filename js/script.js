@@ -89,3 +89,30 @@ function setupScrollAnimations() {
         observer.observe(item);
     });
 }
+// 1. Bloqueia o menu do botão direito (contextmenu)
+document.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
+
+// 2. Bloqueia atalhos de teclado comuns (Ctrl+C, Ctrl+U, Ctrl+Shift+I, F12)
+document.addEventListener('keydown', (event) => {
+  // Impede Ctrl+C (Copiar), Ctrl+U (Ver código-fonte), Ctrl+S (Salvar página)
+  if (event.ctrlKey && ['c', 'u', 's', 'C', 'U', 'S'].includes(event.key)) {
+    event.preventDefault();
+  }
+
+  // Impede F12 e Ctrl+Shift+I (Inspecionar Elemento / DevTools)
+  if (
+    event.key === 'F12' || 
+    (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i'))
+  ) {
+    event.preventDefault();
+  }
+});
+
+// 3. Impede o arrasto de imagens (Drag & Drop)
+document.addEventListener('dragstart', (event) => {
+  if (event.target.tagName === 'IMG') {
+    event.preventDefault();
+  }
+});
