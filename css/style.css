@@ -159,9 +159,77 @@ main{
    4. HEADER
 ===================================== */
 
-/* =====================================
-   5. MENU
-===================================== */
+header{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 60px;
+
+    background: rgba(0,0,0,.85);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    z-index: 1000;
+
+}
+
+
+/* ==============================
+   MENU
+============================== */
+
+nav ul{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+}
+
+nav li{
+
+    list-style: none;
+
+}
+
+nav a{
+
+    position: relative;
+
+    color: var(--cor-texto);
+
+    font-size: .95rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+    transition: var(--transicao);
+
+    padding: 6px 0;
+
+}
+
 
 /* =====================================
    6. CONTAINER
@@ -194,7 +262,89 @@ main{
 /* =====================================
    13. ANIMAÇÕES
 ===================================== */
+nav a::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--cor-destaque);
+
+    transition: width .35s ease;
+
+}
+
+nav a:hover::after{
+
+    width: 100%;
+
+}
 
 /* =====================================
    14. RESPONSIVIDADE
 ===================================== */
+@media (max-width: 900px){
+
+    header{
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        height: auto;
+
+        padding: 20px;
+
+    }
+
+    .logo{
+
+        margin-bottom: 20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+
+    }
+
+}
+
+@media (max-width: 600px){
+
+    header{
+
+        padding: 15px;
+
+    }
+
+    .logo a{
+
+        font-size: 1.2rem;
+
+        letter-spacing: 2px;
+
+    }
+
+    nav a{
+
+        font-size: .85rem;
+
+        letter-spacing: 1px;
+
+    }
+
+}
