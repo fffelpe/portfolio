@@ -1,463 +1,72 @@
-/* ===================================================
-   FELIPE LEAL - PORTFÓLIO
-   style.css
-=================================================== */
-
-/* =======================
-   RESET & BASE
-======================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --preto: #000000;
-    --preto-card: #111111;
-    --borda-card: #242424;
-    --branco: #ffffff;
-    --cinza-claro: #bdbdbd;
-    --cinza-escuro: #1a1a1a;
-    --fonte: 'Poppins', sans-serif;
-    --transicao: all 0.35s ease;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+/* Configuração Geral e Proteções */
 body {
-    background-color: var(--preto);
-    color: var(--branco);
-    font-family: var(--fonte);
-    min-height: 100vh;
-    overflow-x: hidden; /* Evita rolagem lateral sem travar a rolagem vertical */
-    animation: fadePage 0.8s ease-in-out;
-}
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 
-/* =======================
-   HERO / HOME (index.html)
-======================= */
-.hero {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.titulo {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: 12px;
-    margin-bottom: 60px;
-    animation: slideDown 1s ease;
+    /* Proteção anti-seleção */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
-    text-transform: uppercase;
 }
 
-/* =======================
-   NAVEGAÇÃO / MENU
-======================= */
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 45px;
-    flex-wrap: wrap;
-}
-
-.menu a {
-    color: var(--cinza-claro);
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    position: relative;
-    transition: var(--transicao);
-}
-
-.menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 2px;
-    background: var(--branco);
-    transition: width 0.4s ease;
-}
-
-.menu a:hover {
-    color: var(--branco);
-    letter-spacing: 3px;
-    transform: translateY(-3px);
-}
-
-.menu a:hover::after,
-.menu a.ativo::after {
-    width: 100%;
-}
-
-.menu a.ativo {
-    color: var(--branco);
-}
-
-/* =======================
-   PÁGINAS INTERNAS
-======================= */
-.pagina {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 150px 50px 80px;
-}
-
-.titulo-pagina {
-    text-align: center;
-    margin-bottom: 100px;
-    animation: fadePage 1s ease;
-}
-
-.titulo-pagina h1 {
-    font-size: 4rem;
-    font-weight: 300;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-}
-
-.titulo-pagina p {
-    color: var(--cinza-claro);
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* =======================
-   SEÇÃO DE PROJETOS
-======================= */
-.projeto {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 120px;
-    opacity: 0;
-    animation: fadeUp 0.8s forwards;
-}
-
-.projeto:nth-child(2) { animation-delay: 0.2s; }
-.projeto:nth-child(3) { animation-delay: 0.4s; }
-
-.video {
-    width: 100%;
-}
-
-.video iframe {
-    width: 100%;
-    height: 360px;
-    border: none;
-    border-radius: 18px;
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.05);
-    transition: var(--transicao);
-}
-
-.video iframe:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 45px rgba(255, 255, 255, 0.15);
-}
-
-.descricao {
-    background: var(--preto-card);
-    border: 1px solid var(--borda-card);
-    border-radius: 18px;
-    padding: 40px;
-    transition: var(--transicao);
-}
-
-.descricao:hover {
-    transform: translateY(-8px);
-    border-color: var(--branco);
-}
-
-.descricao h2 {
+/* Cabeçalho e Links */
+h1 {
     font-size: 2.2rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.descricao p {
-    color: var(--cinza-claro);
-    line-height: 1.9;
-    margin-bottom: 30px;
-}
-
-.descricao ul {
-    list-style: none;
-}
-
-.descricao li {
-    color: var(--branco);
-    margin-bottom: 15px;
-    padding-left: 28px;
-    position: relative;
-}
-
-.descricao li::before {
-    content: "●";
-    position: absolute;
-    left: 0;
-    color: var(--branco);
-}
-
-/* =======================
-   RODAPÉ
-======================= */
-footer {
-    border-top: 1px solid #222222;
-    margin-top: 80px;
-    padding: 40px;
-    text-align: center;
-}
-
-footer p {
-    color: #777777;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-/* =======================
-   ANIMAÇÕES / KEYFRAMES
-======================= */
-@keyframes fadePage {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+h2 {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =======================
-   RESPONSIVIDADE
-======================= */
-@media (max-width: 1000px) {
-    .projeto {
-        grid-template-columns: 1fr;
-    }
-    .descricao {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 900px) {
-    .titulo {
-        font-size: 3.5rem;
-        text-align: center;
-        letter-spacing: 6px;
-    }
-    .menu {
-        flex-direction: column;
-        gap: 25px;
-    }
-}
-
-@media (max-width: 700px) {
-    .pagina {
-        padding: 120px 25px;
-    }
-    .titulo-pagina h1 {
-        font-size: 2.8rem;
-    }
-    .video iframe {
-        height: 240px;
-    }
-    .descricao {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 500px) {
-    .titulo {
-        font-size: 2.5rem;
-        letter-spacing: 3px;
-    }
-    .menu a {
-        font-size: 0.9rem;
-    }
-}
-/* ===================================================
-   PÁGINA DE CONTATO - CARDS LADO A LADO
-=================================================== */
-
-.container-contatos {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.card-contato {
-    flex: 1;
-    min-width: 250px;
-    max-width: 380px;
-    background: var(--preto-card, #111111);
-    border: 1px solid var(--borda-card, #242424);
-    border-radius: 18px;
-    padding: 35px 25px;
-    text-align: center;
-    transition: var(--transicao, all 0.35s ease);
-}
-
-.card-contato:hover {
-    transform: translateY(-8px);
-    border-color: var(--branco, #ffffff);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-}
-
-.card-contato h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 12px;
-}
-
-.card-contato p {
-    color: var(--cinza-claro, #bdbdbd);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
-
-.link-contato {
-    color: var(--branco, #ffffff);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
+h3 {
+    font-size: 1.2rem;
+    color: #4da6ff;
     letter-spacing: 1px;
-    transition: var(--transicao, all 0.35s ease);
-    word-break: break-all;
 }
 
-.link-contato:hover {
-    opacity: 0.8;
-}
-
-.voltar {
-    color: var(--cinza-claro, #bdbdbd);
+a {
+    color: #4da6ff;
     text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    transition: var(--transicao, all 0.35s ease);
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.voltar:hover {
-    color: var(--branco, #ffffff);
-    letter-spacing: 2px;
+a:hover {
+    color: #ffffff;
 }
 
-/* Responsividade em celulares */
-@media (max-width: 768px) {
-    .container-contatos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-contato {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-/* ===================================================
-   PÁGINA QUEM SOU
-=================================================== */
-
-.container-quem-sou {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+/* Divisores */
+hr {
+    border: 0;
+    height: 1px;
+    background: #333333;
+    margin: 20px auto;
+    width: 80%;
 }
 
-.card-bio {
-    flex: 1;
-    min-width: 300px;
-    background: var(--preto-card, #111111);
-    border: 1px solid var(--borda-card, #242424);
-    border-radius: 18px;
-    padding: 40px;
-    transition: var(--transicao, all 0.35s ease);
+/* Listas alinhadas e limpas */
+ul {
+    list-style-type: square;
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
 }
 
-.card-bio:hover {
-    transform: translateY(-8px);
-    border-color: var(--branco, #ffffff);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+li {
+    margin-bottom: 6px;
+    color: #d1d1d1;
 }
 
-.card-bio h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: var(--branco, #ffffff);
-}
-
-.card-bio p {
-    color: var(--cinza-claro, #bdbdbd);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.lista-interesses {
-    list-style: none;
-    padding: 0;
-}
-
-.lista-interesses li {
-    color: var(--cinza-claro, #bdbdbd);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.lista-interesses strong {
-    color: var(--branco, #ffffff);
-}
-
-/* Responsividade em dispositivos móveis */
-@media (max-width: 768px) {
-    .container-quem-sou {
-        flex-direction: column;
-    }
-    
-    .card-bio {
-        padding: 25px;
-    }
+/* Proteção de imagens */
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
