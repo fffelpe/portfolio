@@ -194,12 +194,6 @@ header{
    MENU
 ============================ */
 
-nav{
-
-    width: 100%;
-
-}
-
 nav ul{
 
     display: flex;
@@ -208,7 +202,7 @@ nav ul{
 
     align-items: center;
 
-    gap: 45px;
+    gap: 50px;
 
     list-style: none;
 
@@ -218,7 +212,7 @@ nav a{
 
     position: relative;
 
-    color: #fff;
+    color: white;
 
     text-decoration: none;
 
@@ -226,49 +220,11 @@ nav a{
 
     letter-spacing: 2px;
 
-    transition: .3s;
+    font-weight: 400;
+
+    transition: .35s;
 
     padding-bottom: 6px;
-
-}
-
-/* Linha animada */
-
-nav a::after{
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 0;
-
-    height: 2px;
-
-    background: white;
-
-    transition: width .35s ease;
-
-}
-
-nav a:hover::after{
-
-    width: 100%;
-
-}
-
-nav a.ativo{
-
-    font-weight: 500;
-
-}
-
-nav a.ativo::after{
-
-    width: 100%;
 
 }
 /* =====================================
@@ -645,19 +601,25 @@ nav a::after{
 
     left: 0;
 
-    bottom: -6px;
+    bottom: 0;
 
     width: 0;
 
     height: 2px;
 
-    background: var(--cor-destaque);
+    background: white;
 
     transition: width .35s ease;
 
 }
 
 nav a:hover::after{
+
+    width: 100%;
+
+}
+
+nav a.ativo::after{
 
     width: 100%;
 
