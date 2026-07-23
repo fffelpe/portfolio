@@ -1,27 +1,52 @@
-.hero-section {
+.titulo-pagina {
     text-align: center;
-    padding: 4rem 1rem;
+    margin-bottom: 3rem;
 }
 
-.hero-section h2 {
+.titulo-pagina h1 {
     font-size: 2.5rem;
-    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.titulo-pagina p {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.descricao h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
+.descricao p {
+    color: #cccccc;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
 }
 
-.contact-form input, 
-.contact-form textarea {
-    padding: 0.8rem;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background: #0d0d0d;
-    color: var(--text-main);
+.descricao ul {
+    list-style: none;
+    padding: 0;
+}
+
+.descricao ul li {
+    color: #a0a0a0;
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.descricao ul li::before {
+    content: "•";
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }

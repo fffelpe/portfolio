@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --bg-main: #000000;         /* Fundo preto padrão */
-    --text-main: #ffffff;       /* Fonte branca padrão */
-    --primary-color: #00adb5;   /* Cor de destaque para links/botões */
-    --card-bg: #111111;         /* Fundo dos cartões em cinza bem escuro */
-    --border-color: #222222;     /* Borda discreta */
-    --font-main: 'Inter', sans-serif;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --text-secondary: #b3b3b3;
+    --card-bg: #0d0d0d;
+    --border-color: #222222;
+    --font-main: 'Poppins', sans-serif;
 }
 
 * {
@@ -16,14 +16,38 @@
 }
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: var(--font-main);
-    background-color: var(--bg-main);
-    color: var(--text-main);
     line-height: 1.6;
 }
 
-main {
-    max-width: 1200px;
+/* Animação suave de entrada do conteúdo */
+.page-content {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Botão de voltar */
+.container-voltar {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.voltar {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #333333;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
 }

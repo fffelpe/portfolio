@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-main);
+    background-color: var(--bg-color);
 }
 
 .hero-header h1 {
@@ -14,16 +14,16 @@
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 1.5rem;
-    color: var(--text-main);
+    color: var(--text-color);
 }
 
-/* Cabeçalho fixo no topo para as páginas internas (Quem Sou, Trabalhos, etc.) */
+/* Cabeçalho fixo no topo para páginas internas (Trabalhos, Quem Sou, etc.) */
 .nav-header {
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-main);
+    background-color: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
