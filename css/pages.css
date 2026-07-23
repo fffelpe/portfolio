@@ -50,16 +50,35 @@
     position: absolute;
     left: 0;
 }
-/* Layout da grade principal da página Quem Sou */
+/* Container principal da grade */
 .grade-quem-sou {
     display: grid;
-    /* Cria colunas de no mínimo 300px que se ajustam automaticamente lado a lado */
+    /* Cria colunas responsivas: em telas médias/grandes coloca os cards lado a lado */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-/* Para cards que você quiser que ocupem a largura inteira (ex: Trajetória ou Objetivos) */
+/* Força o card marcado com essa classe a ocupar todas as colunas (100% da largura) */
 .destaque-largura {
     grid-column: 1 / -1;
+}
+
+/* Espaçamento interno das categorias de ferramentas */
+.categoria-ferramentas {
+    margin-top: 1.2rem;
+}
+
+.categoria-ferramentas h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Divisor simples para itens internos */
+.divisor-suave {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1.2rem 0;
 }
