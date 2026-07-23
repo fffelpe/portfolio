@@ -1,11 +1,16 @@
-.pagina{
-
-    width: 100%;
-
-    max-width: 1200px;
-
+/* Estilos para páginas de conteúdo */
+.content-section {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: left;
+}
 
-    padding: 190px 40px 80px;
+ul.list-items {
+    list-style: none;
+    padding: 0;
+}
 
+.list-items li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
 }
