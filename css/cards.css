@@ -84,3 +84,63 @@
         grid-template-columns: 1fr;
     }
 }
+/* Container em Grid para os Cards de Conhecimentos */
+.grade-conhecimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Card da Categoria */
+.card-categoria {
+    background-color: var(--card-bg, #0d0d0d);
+    border: 1px solid var(--border-color, #222222);
+    border-radius: 12px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-categoria:hover {
+    border-color: #444444;
+    transform: translateY(-4px);
+}
+
+.card-categoria h3 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 0.6rem;
+    margin: 0;
+}
+
+/* Estilo das Tags/Pills para os Itens */
+.lista-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.lista-tags li {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    border: 1px solid #333333;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.lista-tags li:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
