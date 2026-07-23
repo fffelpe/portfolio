@@ -1,42 +1,81 @@
-.lista-projetos {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.projeto-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+/* Card Único para todos os Contatos */
+.card-contato-unico {
+    background-color: var(--card-bg, #0d0d0d);
+    border: 1px solid var(--border-color, #222222);
     border-radius: 12px;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    margin: 3rem auto 0 auto;
+    max-width: 950px;
+
+    /* Alinha os itens lado a lado */
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    gap: 1.5rem;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.projeto-card:hover {
+.card-contato-unico:hover {
     border-color: #444444;
     transform: translateY(-4px);
 }
 
-/* Container responsivo para iframes do YouTube (16:9) */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #1a1a1a;
+/* Coluna de cada meio de contato */
+.item-contato {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+.item-contato h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+.item-contato p {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Link estilizado */
+.link-contato {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    word-break: break-all;
+    border-bottom: 1px dashed #555555;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.link-contato:hover {
+    color: #00adb5;
+    border-color: #00adb5;
+}
+
+/* Linha divisória vertical elegante */
+.divisor-vertical {
+    width: 1px;
+    height: 70px;
+    background-color: #222222;
+}
+
+/* Ajuste Responsivo para Celulares */
+@media (max-width: 768px) {
+    .card-contato-unico {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .divisor-vertical {
+        width: 80%;
+        height: 1px;
+    }
 }

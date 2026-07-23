@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Felipe Leal</title>
-    
-    <!-- Vinculo do arquivo CSS na pasta css/ -->
+
+    <!-- Vinculo do arquivo CSS centralizador -->
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/script.js" defer></script>
-    
+
     <!-- Fonte Google Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,8 @@
 
 <body>
 
-    <!-- Menu de Navegação -->
-    <header class="pagina">
+    <!-- Menu de Navegação Fixo e Centralizado -->
+    <header class="nav-header">
         <nav class="menu" aria-label="Navegação Principal">
             <a href="index.html">Início</a>
             <a href="quem-sou.html">Quem Sou</a>
@@ -31,34 +31,36 @@
     </header>
 
     <!-- Conteúdo Principal -->
-    <main class="pagina">
+    <main class="page-content">
         <section class="titulo-pagina">
             <h1>Contato</h1>
-            <p>
-                Estou sempre aberto a novas oportunidades, projetos e networking.
-            </p>
+            <p>Estou sempre aberto a novas oportunidades, projetos e networking.</p>
         </section>
 
-        <!-- Grade de Cards Lado a Lado -->
-        <div class="container-contatos">
-
-            <div class="card-contato">
+        <!-- ÚNICO CARD COM OS TRÊS CONTATOS LADO A LADO -->
+        <div class="card-contato-unico">
+            
+            <div class="item-contato">
                 <h2>E-mail</h2>
                 <a href="mailto:fleal96@outlook.com" class="link-contato">
                     fleal96@outlook.com
                 </a>
             </div>
 
-            <div class="card-contato">
+            <div class="divisor-vertical"></div>
+
+            <div class="item-contato">
                 <h2>LinkedIn</h2>
                 <a href="https://linkedin.com/in/fffelpe" target="_blank" rel="noopener noreferrer" class="link-contato">
                     linkedin.com/in/fffelpe ↗
                 </a>
             </div>
 
-            <div class="card-contato">
+            <div class="divisor-vertical"></div>
+
+            <div class="item-contato">
                 <h2>GitHub</h2>
-                <p>Confira meus repositórios:</p>
+                <p>Repositórios:</p>
                 <a href="https://github.com/fffelipeleal" target="_blank" rel="noopener noreferrer" class="link-contato">
                     github.com/fffelipeleal ↗
                 </a>
@@ -66,7 +68,8 @@
 
         </div>
 
-        <div style="text-align: center; margin-top: 60px;">
+        <!-- Botão Voltar -->
+        <div class="container-voltar">
             <a class="voltar" href="index.html">← Voltar para o início</a>
         </div>
     </main>
@@ -75,9 +78,6 @@
     <footer>
         <p>&copy; 2026 Felipe Leal. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Script JS -->
-    <script src="js/script.js"></script>
 
 </body>
 
