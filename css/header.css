@@ -1,17 +1,31 @@
-header {
+/* Cabeçalho centralizado exclusivo para a Home */
+.hero-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: var(--bg-main);
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+/* Cabeçalho fixo no topo para as páginas internas (Quem Sou, Trabalhos, etc.) */
+.nav-header {
     padding: 1.5rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background-color: var(--bg-main);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-header h1 {
-    font-size: 1.8rem;
-    color: var(--text-main);
-    font-weight: 700;
 }
