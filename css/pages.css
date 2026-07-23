@@ -50,3 +50,16 @@
     position: absolute;
     left: 0;
 }
+/* Layout da grade principal da página Quem Sou */
+.grade-quem-sou {
+    display: grid;
+    /* Cria colunas de no mínimo 300px que se ajustam automaticamente lado a lado */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Para cards que você quiser que ocupem a largura inteira (ex: Trajetória ou Objetivos) */
+.destaque-largura {
+    grid-column: 1 / -1;
+}

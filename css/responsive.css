@@ -9,3 +9,9 @@
         gap: 1rem;
     }
 }
+@media (max-width: 768px) {
+    .grade-quem-sou {
+        grid-template-columns: 1fr; /* Força 1 coluna única no celular */
+        gap: 1rem;
+    }
+}

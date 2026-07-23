@@ -232,3 +232,57 @@
         height: 1px;
     }
 }
+/* Estilo Base dos Cards */
+.card-info {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.8rem;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-info:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Listas internas (Interesses, Registros, Idiomas) */
+.lista-interesses, .lista-registros, .lista-idiomas {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.lista-interesses li, .lista-registros li, .lista-idiomas li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+/* Badges / Tags das Ferramentas */
+.lista-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.lista-tags li {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.lista-tags li:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.04);
+}
