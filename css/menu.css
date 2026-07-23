@@ -4,11 +4,11 @@ nav {
 }
 
 nav a {
-    color: var(--text-secondary);
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 4px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav a:hover {
