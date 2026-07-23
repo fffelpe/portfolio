@@ -286,3 +286,91 @@
     background: rgba(255, 255, 255, 0.18);
     transform: scale(1.04);
 }
+/* Layout lado a lado para o card Sobre Mim */
+.card-sobre-mim {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Container do perfil (Foto + Nome alinhados) */
+.perfil-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 160px; /* Garante tamanho ideal para a foto */
+}
+
+.perfil-coluna img.foto-perfil {
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.perfil-coluna h3 {
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* O texto ocupa o restante do espaço */
+.bloco-quem-sou {
+    flex: 1;
+}
+
+/* Ajuste de responsividade para telas de celulares */
+@media (max-width: 650px) {
+    .card-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+/* Força a orientação horizontal apenas no Card do Perfil */
+.card-perfil-horizontal {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* Coluna da foto alinhada e centralizada */
+.perfil-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0; /* Impede que a foto encolha se o texto for grande */
+}
+
+.perfil-coluna .foto-perfil {
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.perfil-coluna h3 {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Garante que o bloco de texto ocupe o restante do espaço horizontal */
+.bloco-quem-sou {
+    flex: 1;
+}
+
+.bloco-quem-sou h2 {
+    margin-top: 0; /* Alinha o h2 perfeitamente com o topo da foto */
+    margin-bottom: 1rem;
+}
+
+/* Responsividade: Volta a empilhar em telas menores (smartphones) */
+@media (max-width: 768px) {
+    .card-perfil-horizontal {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+}
