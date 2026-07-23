@@ -19,8 +19,8 @@
 
 <body>
 
-    <!-- Menu de Navegação -->
-    <header class="pagina">
+    <!-- Menu de Navegação Fixo e Centralizado (Sem o Nome) -->
+    <header class="nav-header">
         <nav class="menu" aria-label="Navegação Principal">
             <a href="index.html">Início</a>
             <a href="quem-sou.html">Quem Sou</a>
@@ -30,8 +30,8 @@
         </nav>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="pagina">
+    <!-- Conteúdo Principal Animado -->
+    <main class="page-content">
         
         <section class="titulo-pagina">
             <h1>Trabalhos e Produções</h1>
@@ -40,60 +40,63 @@
             </p>
         </section>
 
-        <!-- PROJETO 1: AGROCULTURA -->
-        <article class="projeto">
-            <div class="video">
-                <!-- Substitua o link 'src' abaixo pela URL de incorporação da playlist do Agrocultura -->
-                <iframe 
-                    src="https://www.youtube.com/embed/nN3n-XziQxE?si=FJfV-EmVnmPAI9gh"" 
-                    title="Playlist Agrocultura" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+        <!-- Container Flex/Grid de Projetos -->
+        <section class="lista-projetos">
 
-            <div class="descricao">
-                <h2>Programa Agrocultura</h2>
-                <p>
-                    Atuação técnica e executiva na produção audiovisual voltada para o setor agropecuário e sustentabilidade.
-                </p>
-                <ul>
-                    <li>Pesquisa de pautas, dados de mercado e mapeamento de fontes.</li>
-                    <li>Acompanhamento de decupagem e organização do fluxo de reportagens.</li>
-                    <li>Gestão de metadados, identificação e controle de matérias exibidas.</li>
-                    <li>Suporte à edição técnica e conferência do padrão de exibição em vídeo.</li>
-                </ul>
-            </div>
-        </article>
+            <!-- PROJETO 1: AGROCULTURA -->
+            <article class="projeto-card">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/nN3n-XziQxE?si=FJfV-EmVnmPAI9gh" 
+                        title="Playlist Agrocultura" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
 
-        <!-- PROJETO 2: JORNAL DA CULTURA -->
-        <article class="projeto">
-            <div class="video">
-                <!-- Substitua o link 'src' abaixo pela URL de incorporação da playlist do Jornal da Cultura -->
-                <iframe 
-                    src="https://www.youtube.com/embed/GIC-NO2E_mo?si=jZoht4ijQAPDGEXH" 
-                    title="Playlist Jornal da Cultura" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+                <div class="descricao">
+                    <h2>Programa Agrocultura</h2>
+                    <p>
+                        Atuação técnica e executiva na produção audiovisual voltada para o setor agropecuário e sustentabilidade.
+                    </p>
+                    <ul>
+                        <li>Pesquisa de pautas, dados de mercado e mapeamento de fontes.</li>
+                        <li>Acompanhamento de decupagem e organização do fluxo de reportagens.</li>
+                        <li>Gestão de metadados, identificação e controle de matérias exibidas.</li>
+                        <li>Suporte à edição técnica e conferência do padrão de exibição em vídeo.</li>
+                    </ul>
+                </div>
+            </article>
 
-            <div class="descricao">
-                <h2>Jornal da Cultura</h2>
-                <p>
-                    Participação no suporte e infraestrutura de produção do telejornalismo diário e em tempo real.
-                </p>
-                <ul>
-                    <li>Apoio na curadoria de imagens, checagem e inserção de recursos visuais.</li>
-                    <li>Articulação entre redação, equipes de reportagem e switcher.</li>
-                    <li>Organização de acervo digital de vídeos e roteiros de estúdio.</li>
-                    <li>Verificação de padrão técnico e agilidade na entrega de conteúdos diários.</li>
-                </ul>
-            </div>
-        </article>
+            <!-- PROJETO 2: JORNAL DA CULTURA -->
+            <article class="projeto-card">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/GIC-NO2E_mo?si=jZoht4ijQAPDGEXH" 
+                        title="Playlist Jornal da Cultura" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="descricao">
+                    <h2>Jornal da Cultura</h2>
+                    <p>
+                        Participação no suporte e infraestrutura de produção do telejornalismo diário e em tempo real.
+                    </p>
+                    <ul>
+                        <li>Apoio na curadoria de imagens, checagem e inserção de recursos visuais.</li>
+                        <li>Articulação entre redação, equipes de reportagem e switcher.</li>
+                        <li>Organização de acervo digital de vídeos e roteiros de estúdio.</li>
+                        <li>Verificação de padrão técnico e agilidade na entrega de conteúdos diários.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
 
         <!-- Botão Voltar -->
-        <div style="text-align: center; margin-top: 60px;">
+        <div class="container-voltar">
             <a class="voltar" href="index.html">← Voltar para o início</a>
         </div>
 
@@ -103,9 +106,6 @@
     <footer>
         <p>&copy; 2026 Felipe Leal. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Script JS -->
-    <script src="js/script.js"></script>
 
 </body>
 
