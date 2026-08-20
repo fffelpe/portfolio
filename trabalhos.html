@@ -9,7 +9,9 @@
 
     <!-- CSS Principal -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <script src="js/script.js" defer></script>
+    <script src="js/lightbox.js" defer></script>
 
     <!-- Fonte Google Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,23 +115,37 @@
         </p>
 
         <!-- Galeria do projeto -->
-        <div class="galeria-catalogo">
+        <div class="galeria-catalogo" id="galeria-catalogo">
 
-            <div class="imagem-catalogo">
-                <img src="images/catalogo-1.jpeg" 
+            <div class="imagem-catalogo" data-index="0">
+                <img src="images/Catalogo1.jpeg" 
                      alt="Tela do catálogo de imagens">
             </div>
 
-            <div class="imagem-catalogo">
+            <div class="imagem-catalogo" data-index="1">
                 <img src="images/Catalogo2.png" 
                      alt="Tela de busca do catálogo de imagens">
             </div>
 
-            <div class="imagem-catalogo">
+            <div class="imagem-catalogo" data-index="2">
                 <img src="images/Catalogo3.png" 
                      alt="Tela de visualização do catálogo de imagens">
             </div>
 
+        </div>
+
+        <!-- Lightbox / Slide do catálogo -->
+        <div class="lightbox-overlay" id="lightbox-overlay">
+            <button class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">&times;</button>
+
+            <button class="lightbox-seta lightbox-seta-esquerda" id="lightbox-anterior" aria-label="Imagem anterior">&#10094;</button>
+
+            <div class="lightbox-conteudo">
+                <img src="" alt="" id="lightbox-imagem">
+                <p class="lightbox-contador" id="lightbox-contador"></p>
+            </div>
+
+            <button class="lightbox-seta lightbox-seta-direita" id="lightbox-proxima" aria-label="Próxima imagem">&#10095;</button>
         </div>
 
         <ul>
