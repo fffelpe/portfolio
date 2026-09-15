@@ -331,3 +331,104 @@ a:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================
+   ARTES & COLAGENS
+========================================================== */
+
+.arts-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(91, 140, 255, 0.09),
+      transparent 26rem
+    ),
+    rgba(255, 255, 255, 0.018);
+  border-top: 1px solid var(--portfolio-border);
+  border-bottom: 1px solid var(--portfolio-border);
+}
+
+.arts-grid {
+  align-items: stretch;
+}
+
+.art-card {
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(19, 34, 56, 0.95),
+    rgba(13, 26, 43, 0.95)
+  );
+  border: 1px solid var(--portfolio-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.16);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.art-card:hover {
+  border-color: rgba(91, 140, 255, 0.48);
+  transform: translateY(-5px);
+  box-shadow: 0 1.4rem 3.5rem rgba(0, 0, 0, 0.24);
+}
+
+.art-card-title {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 1.35rem 1.5rem;
+  border-bottom: 1px solid var(--portfolio-border);
+}
+
+.art-card-title h3 {
+  margin: 0;
+  color: #f8f9fa;
+  line-height: 1.35;
+}
+
+.art-image-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 0.75rem;
+  background: rgba(2, 7, 14, 0.72);
+}
+
+.art-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .art-image-frame {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .art-card-title {
+    min-height: auto;
+  }
+
+  .art-image-frame {
+    min-height: 0;
+  }
+
+  .art-image {
+    max-height: none;
+  }
+}
